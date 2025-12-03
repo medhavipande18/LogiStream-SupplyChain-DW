@@ -1,0 +1,40 @@
+{
+    "Version": "2012-10-17",
+    "Statement": [
+        {
+            "Sid": "S3Access",
+            "Effect": "Allow",
+            "Action": [
+                "s3:GetObject",
+                "s3:PutObject",
+                "s3:ListBucket"
+            ],
+            "Resource": [
+                "arn:aws:s3:::dataco-supply-chain-data*",
+                "arn:aws:s3:::dataco-geospatial-data*"
+            ]
+        },
+        {
+            "Sid": "GlueAndRedshiftAccess",
+            "Effect": "Allow",
+            "Action": [
+                "glue:*",
+                "redshift-serverless:GetWorkgroup",
+                "redshift-serverless:GetCredentials",
+                "redshift:GetClusterCredentials",
+                "redshift-data:ExecuteStatement"
+            ],
+            "Resource": "*"
+        },
+        {
+            "Sid": "Logging",
+            "Effect": "Allow",
+            "Action": [
+                "logs:CreateLogGroup",
+                "logs:CreateLogStream",
+                "logs:PutLogEvents"
+            ],
+            "Resource": "arn:aws:logs:*:*:*"
+        }
+    ]
+}

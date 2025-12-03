@@ -1,0 +1,24 @@
+{
+    "SecurityGroupConfig": {
+        "GroupName": "LogiStream-Redshift-SG",
+        "Description": "Allow inbound traffic for Redshift and Glue",
+        "InboundRules": [
+            {
+                "Protocol": "tcp",
+                "FromPort": 5439,
+                "ToPort": 5439,
+                "IpRange": "0.0.0.0/0",
+                "Description": "Allow Redshift port for BI Tools and ETL"
+            },
+            {
+                "Protocol": "tcp",
+                "FromPort": 443,
+                "ToPort": 443,
+                "IpRange": "0.0.0.0/0",
+                "Description": "HTTPS for AWS Service API communication"
+            }
+        ]
+    },
+    "SubnetType": "Public",
+    "AvailabilityZones": ["us-east-2a", "us-east-2b"]
+}
