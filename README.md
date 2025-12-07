@@ -10,11 +10,7 @@ The transformed, normalized data is consolidated into an **Amazon Redshift Serve
 
 ## 📁 Repository Structure & Code Organization
 
-The repository is structured to clearly separate infrastructure, ETL logic, DDL scripts, and documentation for reproducibility.
-
-## 📁 Repository Structure & Code Organization
-
-The repository is structured to clearly separate infrastructure, ETL logic, DDL scripts, and documentation for reproducibility.
+The repository is structured to clearly separate infrastructure, ETL logic, DDL scripts, source data, and documentation for reproducibility.
 
 ```text
 LogiStream-SupplyChain-DW/
@@ -24,6 +20,11 @@ LogiStream-SupplyChain-DW/
 ├── infrastructure/
 │   ├── 01_iam_roles.json                # IAM policy and trust definitions
 │   └── 02_redshift_vpc_config.json      # Redshift VPC and security group configuration
+│
+├── source_data/                         # Folder to upload raw and metadata source files
+│   ├── raw_data/                        # Original CSV files
+│   ├── geojson/                         # Raw GeoJSON input files
+│   └── metadata/                        # Supporting data and mapping info
 │
 ├── etl_jobs/
 │   ├── lambda_geojson_processor.py      # Lambda function for GeoJSON flattening (WKT conversion)
