@@ -12,28 +12,30 @@ The transformed, normalized data is consolidated into an **Amazon Redshift Serve
 
 The repository is structured to clearly separate infrastructure, ETL logic, DDL scripts, and documentation for reproducibility.
 
+## 📁 Repository Structure & Code Organization
+
+The repository is structured to clearly separate infrastructure, ETL logic, DDL scripts, and documentation for reproducibility.
+
+```text
 LogiStream-SupplyChain-DW/
 │
-├── README.md # Project overview and replication guide (this file)
+├── README.md                            # Project overview and replication guide (this file)
 │
 ├── infrastructure/
-│ ├── 01_iam_roles.json # IAM policy and trust definitions
-│ └── 02_redshift_vpc_config.json # Redshift VPC and security group configuration
+│   ├── 01_iam_roles.json                # IAM policy and trust definitions
+│   └── 02_redshift_vpc_config.json      # Redshift VPC and security group configuration
 │
 ├── etl_jobs/
-│ ├── lambda_geojson_processor.py # Lambda function for GeoJSON flattening (WKT conversion)
-│ └── glue_master_etl.py # PySpark ETL script for Redshift loading
+│   ├── lambda_geojson_processor.py      # Lambda function for GeoJSON flattening (WKT conversion)
+│   └── glue_master_etl.py               # PySpark ETL script for Redshift loading
 │
 ├── data_warehouse/
-│ └── ddl_snowflake_schema.sql # CREATE TABLE scripts for all 9 dimension and fact tables
+│   └── ddl_snowflake_schema.sql         # CREATE TABLE scripts for all 9 dimension and fact tables
 │
 └── documentation/
-└── milestone_reports/
-├── Milestone5_Group4.pdf
-└── Milestone6_Group4.pdf
-
-
-
+    └── milestone_reports/
+        ├── Milestone5_Group4.pdf
+        └── Milestone6_Group4.pdf
 
 ---
 
