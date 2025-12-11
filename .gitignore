@@ -1,0 +1,10 @@
+# Ignore raw data files in source_data folder
+source_data/raw_data/*.csv
+source_data/geojson/*.geojson
+
+# Ignore large JAR files
+*.jar
+
+# Standard OS ignores
+Thumbs.db
+.DS_Store
