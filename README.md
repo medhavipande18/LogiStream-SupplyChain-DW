@@ -6,7 +6,7 @@ The **LogiStream** cloud data pipeline is engineered as a robust **hybrid soluti
 This architecture utilizes **Amazon S3** for secure data staging and storage, **AWS Glue** for centralized data cataloging and complex **PySpark ETL** processing, and **AWS Lambda** for specialized GeoJSON flattening.  
 The transformed, normalized data is consolidated into an **Amazon Redshift Serverless Data Warehouse**, enabling powerful, real-time operational dashboards for supply-chain analytics.
 
-*Data Source:* https://www.kaggle.com/datasets/aaumgupta/refined-dataco-supply-chain-geospatial-dataset
+**Data Source:** https://www.kaggle.com/datasets/aaumgupta/refined-dataco-supply-chain-geospatial-dataset
 ---
 
 ## Repository Structure & Code Organization
