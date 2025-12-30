@@ -40,6 +40,7 @@ LogiStream-SupplyChain-DW/
 │
 ├── documentation/
 │    └── Project_Report.pdf                # Final Project Report with all details.
+│
 └── image/
     └── architecture_diagram.png               # System Architecture
 
